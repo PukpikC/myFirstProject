@@ -2,11 +2,3 @@ language: html
 php:
   - "stable"
 
-before_script:
- - wget http://getcomposer.org/composer.phar
- - php composer.phar install --dev --no-interaction
-
-script:
-  - phpunit ./tests
-  - mkdir -p build/logs
-  - phpunit --coverage-clover build/logs/clover.xml ./tests
